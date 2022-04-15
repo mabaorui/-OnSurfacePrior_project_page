@@ -168,7 +168,7 @@
 model-viewer{
     background-color: #EDEDED;
 	width: 100%; 
-    height: auto;
+    height: 400px;
 }
 
 .thingi .col model-viewer{

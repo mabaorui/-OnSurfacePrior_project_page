@@ -166,7 +166,7 @@
 }
 
 model-viewer{
-    background-color: #333;
+    background-color: #EDEDED;
 }
 
 .thingi .col model-viewer{
@@ -219,13 +219,13 @@ table.dataintable th {
 	padding:10px 10px 10px 10px;
 	background-color:#3F3F3F;
 	border:1px solid #3F3F3F;
-	text-align:left;
+	text-align:center;
 	color:#fff;
 	}
 
 table.dataintable td {
 	vertical-align:text-top;
-	padding:9px 9px 9px 9px;
+	padding:1px 1px 1px 1px;
 	border:1px solid #aaa;
 	}
 

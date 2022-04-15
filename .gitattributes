@@ -1,1 +1,4 @@
+objects/bathroom12_cocc.glb filter=lfs diff=lfs merge=lfs -text
+objects/bathroom12_ours.glb filter=lfs diff=lfs merge=lfs -text
+objects/bathroom12_input.glb filter=lfs diff=lfs merge=lfs -text
 *.glb filter=lfs diff=lfs merge=lfs -text

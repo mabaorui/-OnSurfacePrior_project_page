@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>DCC-DIF</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="paper-title">
+                <div class="col">
+                    <div class="row"> <h1 class="short-title"> DCC-DIF </h1> </div>
+                    <div class="row"> <h3 class="long-title"> Learning Deep Implicit Functions for 3D Shapes with Dynamic Code Clouds </h3> </div>
+                    <div class="row"> <p class="conference-label"> CVPR 2022 </p> </div>
+                </div>
+            </div>
+
+            <div class="authors-list">
+                <div class="row">
+                    <div class="col">
+                        <div class="row"> <p class="author-name">Tianyang Li</p> </div>
+                        <div class="row"> <p class="affiliation">Tsinghua University</p> </div>
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="author-name">Xin Wen</p> </div>
+                        <div class="row"> <p class="affiliation">JD Logistics</p> </div>
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="author-name"><a href="https://yushen-liu.github.io/">Yu-Shen Liu</a><sup>*</sup></p> </div>
+                        <div class="row"> <p class="affiliation">Tsinghua University</p> </div>
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="author-name">Hua Su</p> </div>
+                        <div class="row"> <p class="affiliation">Kuaishou Technology</p> </div>
+                    </div>
+                    <div class="col">
+                        <div class="row"> <p class="author-name">Zhizhong Han</p> </div>
+                        <div class="row"> <p class="affiliation">Wayne State University</p> </div>
+                    </div>
+                </div>
+                <div class="row"> <div class="col"> <p class="author-denote"><sup>*</sup>Corresponding Author</p> </div> </div>
+            </div>
+
+            <div class="resource-link">
+                <div class="row">
+                    <div class="col">
+                        <a href="https://github.com/lity20/DCCDIF">
+                            <img class="resource-icon" src="./images/code.png" alt="code icon">
+                            <p class="resource-text">Code</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://drive.google.com/drive/folders/1UIh8AxULPi9vY0c1wuZ7HRX4XxDI6a1P?usp=sharing">
+                            <img class="resource-icon" src="./images/data.png" alt="data icon">
+                            <p class="resource-text">Data</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://yushen-liu.github.io/main/pdf/LiuYS_CVPR2022_DCC-DIF.pdf">
+                            <img class="resource-icon" src="./images/paper.png" alt="paper icon">
+                            <p class="resource-text">Paper</p>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="https://yushen-liu.github.io/main/pdf/LiuYS_CVPR2022_DCC-DIF-supp.pdf">
+                            <img class="resource-icon" src="./images/supplement.png" alt="supplement icon">
+                            <p class="resource-text">Supplement</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-images">
+                <div class="row">
+                    <img class="abstract-img1" src="./images/intro1.png" alt="abstract image">
+                    <img class="abstract-img2" src="./images/intro2.png" alt="abstract image">    
+                </div>
+            </div>
+
+            <div class="abstract">
+                <p class="abstract-title">
+                    Abstract
+                </p>
+                <p class="abstract-text">
+                    Deep Implicit Function (DIF) has gained popularity as an efficient 3D shape representation.
+                    To capture geometry details, current methods usually learn DIF using local latent codes, 
+                    which discretize the space into a regular 3D grid (or octree) and store local codes in grid points (or octree nodes).
+                    Given a query point, the local feature is computed by interpolating its neighboring local codes with their positions.
+                    However, the local codes are constrained at discrete and regular positions like grid points, 
+                    which makes the code positions difficult to be optimized and limits their representation ability.
+                    To solve this problem, we propose to learn DIF with Dynamic Code Cloud, named DCC-DIF.
+                    Our method explicitly associates local codes with learnable position vectors, 
+                    and the position vectors are continuous and can be dynamically optimized, which improves the representation ability.
+                    In addition, we propose a novel code position loss to optimize the code positions,
+                    which heuristically guides more local codes to be distributed around complex geometric details.
+                    In contrast to previous methods, our DCC-DIF represents 3D shapes more efficiently with a small amount of local codes,
+                    and improves the reconstruction quality.
+                    Experiments demonstrate that DCC-DIF achieves better performance over previous methods.
+                </p>
+            </div>
+
+            <div class="video">
+                <p class="video-title">
+                    Results: Video
+                </p>
+                <video width="100%" height="100%" controls autoplay loop>
+                    <source src="./videos/results-display.mp4" type="video/mp4"/>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="view-3D">
+                <p class="view-3D-title">
+                    Results: View in 3D
+                </p>
+                <div class="row thingi">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/armour.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/nandi.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+                <div class="row shapenet-s">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp3.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp4.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+                <div class="row shapenet-s">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp5.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair3.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+                <div class="row shapenet-l">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/plane1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/plane2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/watercraft1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+                <div class="row shapenet-l">
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/watercraft2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bench1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                    <div class="col">
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bench2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </div>
+                </div>
+            </div>
+
+            <div class="citation">
+                <p class="citation-title">
+                    Citation
+                </p>
+                <p class="citation-text">
+                    @inproceedings{Li2022DCCDIF,</br>
+                        &ensp;&ensp;&ensp;&ensp;title={Learning Deep Implicit Functions for 3D Shapes with Dynamic Code Clouds},</br>
+                        &ensp;&ensp;&ensp;&ensp;author={Tianyang Li and Xin Wen and Yu-Shen Liu and Hua Su and Zhizhong Han},</br>
+                        &ensp;&ensp;&ensp;&ensp;booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},</br>
+                        &ensp;&ensp;&ensp;&ensp;year={2022}</br>
+                    }
+                </p>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    </body>
+
+</html>

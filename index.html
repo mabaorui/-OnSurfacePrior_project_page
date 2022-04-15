@@ -116,7 +116,7 @@
                     Results: View in 3D
                 </p>
                 <div>
-                    <h2>可选的属性</h2>
+                    <h2>Visual comparison with IMLS [1] in unseen classes under ShapeNet.</h2>
                     
                     <table class="dataintable">
                     <tr>
@@ -151,63 +151,42 @@
 
                     </table>
                 </div>
-                <div class="row thingi">
-                    <div class="col">
+
+                <div>
+                    <h2>Visual comparison with COcc [2] under SceneNet.</h2>
+                    
+                    <table class="dataintable">
+                    <tr>
+                    <th style="width:33%;">Input points without normals</th>
+                    <th style="width:33%;">COcc</th>
+                    <th style="width:33%;">Ours</th>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bathtub1_input.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </td>
+                    <td>
+                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bathtub1_IMLS.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                    </td>
+                    <td>
                         <model-viewer alt="View reconstruction results in 3D" src="./objects/bathtub1_ours.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/nandi.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                </div>
-                <div class="row shapenet-s">
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp3.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp4.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                </div>
-                <div class="row shapenet-s">
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/lamp5.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/chair3.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                </div>
-                <div class="row shapenet-l">
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/plane1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/plane2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/watercraft1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                </div>
-                <div class="row shapenet-l">
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/watercraft2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bench1.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
-                    <div class="col">
-                        <model-viewer alt="View reconstruction results in 3D" src="./objects/bench2.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
-                    </div>
+                    </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <model-viewer alt="View reconstruction results in 3D" src="./objects/bathtub2_input.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                        </td>
+                        <td>
+                            <model-viewer alt="View reconstruction results in 3D" src="./objects/bathtub2_IMLS.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                        </td>
+                        <td>
+                            <model-viewer alt="View reconstruction results in 3D" src="./objects/bathtub2_ours.glb" exposure="0.3" auto-rotate camera-controls></model-viewer>
+                        </td>
+                    </tr>
+
+                    </table>
                 </div>
             </div>
 
